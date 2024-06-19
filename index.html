@@ -1,14 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <title>Solarsystem</title>
+  <script type="module" crossorigin src="/assets/index-DJmvj7a2.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BIi4R5mI.css">
 </head>
 <body>
-    <h1 class="animate slideInLeft">Heading</h1>
-    <h2 class="rotate animate">rotate</h2>
-    <h3 class="animate bounce">bounce</h3>
-    <button class="btn">Button</button>
+  <!--canvas mit allen 3D Elementen-->
+  <canvas id="bg"></canvas>
+  <main>
+   
+     <section class="header"> 
+      <h1 class="heading teil2">Solar</h1>
+      <h1 class="heading teil3">system</h1>
+      <!--<img id="sun" src="Solarsystemscope_texture_2k_sun.jpg">-->
+     </section>
+
+       <!--Mercury-->
+       <section class="link mer1" id="mer"></section>
+      <section class="mercury planet">
+       <div class="grid-item number" id="mer"><p>1</p></div>
+       <div class="name">
+         <p class="lightup">Mercury</p>
+         <p class="lightup">The smallest planet</p></div>
+       <div class="grid-item solar"><!--Sonnensystem darstellung-->
+           <div class="sun circle"></div>
+         <div class="mer circle"></div>
+         <div class="ven circle"></div>
+         <div class="ear circle"></div>
+         <div class="mar circle"></div>
+         <div class="jup circle"></div>
+         <div class="sat circle"></div>
+         <div class="ura circle"></div>
+         <div class="nep circle"></div>
+         <div class="planet-mer scroll-planet now" data-target="#mer"></div>
+         <div class="planet-ven scroll-planet not-now" data-target="#ven"></div>
+         <div class="planet-ear scroll-planet not-now" data-target="#ear"></div>
+         <div class="planet-mar scroll-planet not-now" data-target="#mar"></div>
+         <div class="planet-jup scroll-planet not-now" data-target="#jup"></div>
+         <div class="planet-sat scroll-planet not-now" data-target="#sat"></div>
+         <div class="planet-ura scroll-planet not-now" data-target="#ura"></div>
+         <div class="planet-nep scroll-planet not-now" data-target="#nep"></div>
+         <div class="ring scroll-planet not-now" data-target="#sat"></div>
+       </div>
+       <!--Tabllen informationen-->
+       <div class="grid-item info">
+         <table >
+           <tbody>
+             <tr >
+               <th class="lightup">mean dist from Sun </th>
+               <th class="lightup">57,909,227 km</th>
+             </tr>
+             <tr >
+               <th  class="lightup">mean radius</th>
+               <th  class="lightup">2,439.7km </th>
+             </tr>
+             <tr >
+               <th  class="lightup">mass</th>
+               <th  class="lightup"> 3.30 × 10^23 kg</th>
+             </tr>
+             <tr >
+               <th  class="lightup">length of a year</th>
+               <th  class="lightup">87.9 Earth days </th>
+             </tr>
+             <tr >
+               <th class="lightup">rotation period</th>
+               <th class="lightup"> 58.6 Earth days</th>
+             </tr>
+             <tr >
+               <th class="lightup">mean surface temp </th>
+               <th class="lightup"> 440 K (167 °C) </th>
+             </tr>
+             <tr >
+               <th class="lightup">number of known moons  </th>
+               <th class="lightup"> none </th>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+       </section>
+       <!--Venus-->
+       <section class="link ven2" id="ven"></section>
+     <section class="venus planet" >
+       <div class="grid-item number" id="ven"><p>2</p></div>
+       <div class="name">
+        <p class="lightup">Venus</p>
+        <p class="lightup">The hottest planet</p></div>
+      <div class="grid-item solar"><!--Sonnensystem darstellung-->
+          <div class="sun circle"></div>
+        <div class="mer circle"></div>
+        <div class="ven circle"></div>
+        <div class="ear circle"></div>
+        <div class="mar circle"></div>
+        <div class="jup circle"></div>
+        <div class="sat circle"></div>
+        <div class="ura circle"></div>
+        <div class="nep circle"></div>
+        <div class="planet-mer scroll-planet now" data-target="#mer"></div>
+        <div class="planet-ven scroll-planet not-now" data-target="#ven"></div>
+        <div class="planet-ear scroll-planet not-now" data-target="#ear"></div>
+        <div class="planet-mar scroll-planet not-now" data-target="#mar"></div>
+        <div class="planet-jup scroll-planet not-now" data-target="#jup"></div>
+        <div class="planet-sat scroll-planet not-now" data-target="#sat"></div>
+        <div class="planet-ura scroll-planet not-now" data-target="#ura"></div>
+        <div class="planet-nep scroll-planet not-now" data-target="#nep"></div>
+        <div class="ring scroll-planet not-now" data-target="#sat"></div>
+      </div>
+      <!--Tabllen informationen-->
+      <div class="grid-item info">
+        <table >
+          <tbody>
+            <tr >
+              <th class="lightup">mean dist from Sun </th>
+              <th class="lightup">108,209,475 km</th>
+            </tr>
+            <tr >
+              <th  class="lightup">mean radius</th>
+              <th  class="lightup">6,051.8 km </th>
+            </tr>
+            <tr >
+              <th  class="lightup">mass</th>
+              <th  class="lightup"> 4.87 × 10^24 kg </th>
+            </tr>
+            <tr >
+              <th  class="lightup">length of a year</th>
+              <th  class="lightup">224.7 Earth days </th>
+            </tr>
+            <tr >
+              <th class="lightup">rotation period</th>
+              <th class="lightup"> 243 Earth days</th>
+            </tr>
+            <tr >
+              <th class="lightup">mean surface temp </th>
+              <th class="lightup">737 K (464 °C)  </th>
+            </tr>
+            <tr >
+              <th class="lightup">number of known moons  </th>
+              <th class="lightup"> none </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+       
+     </section>
+     <!--Earth-->
+     <section class="link ear3" id="ear"></section>
+     <section class="earth planet" >
+       <div class="grid-item number" id="ear"><p>3</p></div>
+       <div class="name">
+        <p class="lightup">Earth</p>
+        <p class="lightup">Our home planet</p></div>
+      <div class="grid-item solar"><!--Sonnensystem darstellung-->
+          <div class="sun circle"></div>
+        <div class="mer circle"></div>
+        <div class="ven circle"></div>
+        <div class="ear circle"></div>
+        <div class="mar circle"></div>
+        <div class="jup circle"></div>
+        <div class="sat circle"></div>
+        <div class="ura circle"></div>
+        <div class="nep circle"></div>
+        <div class="planet-mer scroll-planet now" data-target="#mer"></div>
+        <div class="planet-ven scroll-planet not-now" data-target="#ven"></div>
+        <div class="planet-ear scroll-planet not-now" data-target="#ear"></div>
+        <div class="planet-mar scroll-planet not-now" data-target="#mar"></div>
+        <div class="planet-jup scroll-planet not-now" data-target="#jup"></div>
+        <div class="planet-sat scroll-planet not-now" data-target="#sat"></div>
+        <div class="planet-ura scroll-planet not-now" data-target="#ura"></div>
+        <div class="planet-nep scroll-planet not-now" data-target="#nep"></div>
+        <div class="ring scroll-planet not-now" data-target="#sat"></div>
+      </div>
+      <!--Tabllen informationen-->
+      <div class="grid-item info">
+        <table >
+          <tbody>
+            <tr >
+              <th class="lightup">mean dist from Sun </th>
+              <th class="lightup">149,598,262 km</th>
+            </tr>
+            <tr >
+              <th  class="lightup">mean radius</th>
+              <th  class="lightup">6,378.14 km </th>
+            </tr>
+            <tr >
+              <th  class="lightup">mass</th>
+              <th  class="lightup"> 5.972 × 10^24 kg  </th>
+            </tr>
+            <tr >
+              <th  class="lightup">length of a year</th>
+              <th  class="lightup">365,2 Earth days </th>
+            </tr>
+            <tr >
+              <th class="lightup">rotation period</th>
+              <th class="lightup"> 23.93 hr</th>
+            </tr>
+            <tr >
+              <th class="lightup">mean surface temp </th>
+              <th class="lightup">288 K (15 °C)   </th>
+            </tr>
+            <tr >
+              <th class="lightup">number of known moons  </th>
+              <th class="lightup"> one </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+     </section>
+ <!--Mars-->
+ <section class="link mar4" id="mar"></section>
+     <section class="mars planet">
+       <div class="grid-item number" id="mar"><p class="vier">4</p></div>
+       <div class="name">
+        <p class="lightup">Mars</p>
+        <p class="lightup">The red planet</p></div>
+      <div class="grid-item solar"><!--Sonnensystem darstellung-->
+          <div class="sun circle"></div>
+        <div class="mer circle"></div>
+        <div class="ven circle"></div>
+        <div class="ear circle"></div>
+        <div class="mar circle"></div>
+        <div class="jup circle"></div>
+        <div class="sat circle"></div>
+        <div class="ura circle"></div>
+        <div class="nep circle"></div>
+        <div class="planet-mer scroll-planet now" data-target="#mer"></div>
+        <div class="planet-ven scroll-planet not-now" data-target="#ven"></div>
+        <div class="planet-ear scroll-planet not-now" data-target="#ear"></div>
+        <div class="planet-mar scroll-planet not-now" data-target="#mar"></div>
+        <div class="planet-jup scroll-planet not-now" data-target="#jup"></div>
+        <div class="planet-sat scroll-planet not-now" data-target="#sat"></div>
+        <div class="planet-ura scroll-planet not-now" data-target="#ura"></div>
+        <div class="planet-nep scroll-planet not-now" data-target="#nep"></div>
+        <div class="ring scroll-planet not-now" data-target="#sat"></div>
+      </div>
+      <!--Tabllen informationen-->
+      <div class="grid-item info">
+        <table >
+          <tbody>
+            <tr >
+              <th class="lightup">mean dist from Sun </th>
+              <th class="lightup">227,943,824 km</th>
+            </tr>
+            <tr >
+              <th  class="lightup">mean radius</th>
+              <th  class="lightup">3,396.2 km  </th>
+            </tr>
+            <tr >
+              <th  class="lightup">mass</th>
+              <th  class="lightup"> 6.417 × 10^23 kg   </th>
+            </tr>
+            <tr >
+              <th  class="lightup">length of a year</th>
+              <th  class="lightup">686.98 Earth days </th>
+            </tr>
+            <tr >
+              <th class="lightup">rotation period</th>
+              <th class="lightup"> 24.6 hr</th>
+            </tr>
+            <tr >
+              <th class="lightup">mean surface temp </th>
+              <th class="lightup">210 K (−63 °C)   </th>
+            </tr>
+            <tr >
+              <th class="lightup">number of known moons  </th>
+              <th class="lightup"> two </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+     </section>
+      <!--Jupiter-->
+      <section class="link jup5" id="jup"></section>
+      <section class="jupiter planet">
+        <div class="grid-item number" id="jup"><p>5</p></div>
+        <div class="name">
+         <p class="lightup">Jupiter</p>
+         <p class="lightup">The largest planet</p></div>
+       <div class="grid-item solar"><!--Sonnensystem darstellung-->
+           <div class="sun circle"></div>
+         <div class="mer circle"></div>
+         <div class="ven circle"></div>
+         <div class="ear circle"></div>
+         <div class="mar circle"></div>
+         <div class="jup circle"></div>
+         <div class="sat circle"></div>
+         <div class="ura circle"></div>
+         <div class="nep circle"></div>
+         <div class="planet-mer scroll-planet now" data-target="#mer"></div>
+         <div class="planet-ven scroll-planet not-now" data-target="#ven"></div>
+         <div class="planet-ear scroll-planet not-now" data-target="#ear"></div>
+         <div class="planet-mar scroll-planet not-now" data-target="#mar"></div>
+         <div class="planet-jup scroll-planet not-now" data-target="#jup"></div>
+         <div class="planet-sat scroll-planet not-now" data-target="#sat"></div>
+         <div class="planet-ura scroll-planet not-now" data-target="#ura"></div>
+         <div class="planet-nep scroll-planet not-now" data-target="#nep"></div>
+         <div class="ring scroll-planet not-now" data-target="#sat"></div>
+       </div>
+       <!--Tabllen informationen-->
+       <div class="grid-item info">
+         <table >
+           <tbody>
+             <tr >
+               <th class="lightup">mean dist from Sun </th>
+               <th class="lightup">778,340,821 km</th>
+             </tr>
+             <tr >
+               <th  class="lightup">mean radius</th>
+               <th  class="lightup">71,492 km   </th>
+             </tr>
+             <tr >
+               <th  class="lightup">mass</th>
+               <th  class="lightup"> 18.98 × 10^26 kg    </th>
+             </tr>
+             <tr >
+               <th  class="lightup">length of a year</th>
+               <th  class="lightup">11.86 Earth years </th>
+             </tr>
+             <tr >
+               <th class="lightup">rotation period</th>
+               <th class="lightup"> 9.8 hr</th>
+             </tr>
+             <tr >
+               <th class="lightup">number of known moons  </th>
+               <th class="lightup"> sixty-six </th>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+      </section>
+ <!--Saturn-->
+  <section class="link sat6" id="sat"></section>
+     <section class="saturn planet">
+       <div class="grid-item number" id="sat"><p>6</p></div>
+       <div class="name">
+        <p class="lightup">Saturn</p>
+        <p class="lightup">The ringed planet</p></div>
+      <div class="grid-item solar"><!--Sonnensystem darstellung-->
+          <div class="sun circle"></div>
+        <div class="mer circle"></div>
+        <div class="ven circle"></div>
+        <div class="ear circle"></div>
+        <div class="mar circle"></div>
+        <div class="jup circle"></div>
+        <div class="sat circle"></div>
+        <div class="ura circle"></div>
+        <div class="nep circle"></div>
+        <div class="planet-mer scroll-planet now" data-target="#mer"></div>
+        <div class="planet-ven scroll-planet not-now" data-target="#ven"></div>
+        <div class="planet-ear scroll-planet not-now" data-target="#ear"></div>
+        <div class="planet-mar scroll-planet not-now" data-target="#mar"></div>
+        <div class="planet-jup scroll-planet not-now" data-target="#jup"></div>
+        <div class="planet-sat scroll-planet not-now" data-target="#sat"></div>
+        <div class="planet-ura scroll-planet not-now" data-target="#ura"></div>
+        <div class="planet-nep scroll-planet not-now" data-target="#nep"></div>
+        <div class="ring scroll-planet not-now" data-target="#sat"></div>
+      </div>
+      <!--Tabllen informationen-->
+      <div class="grid-item info">
+        <table >
+          <tbody>
+            <tr >
+              <th class="lightup">mean dist from Sun </th>
+              <th class="lightup">1,426,666,000 km</th>
+            </tr>
+            <tr >
+              <th  class="lightup">mean radius</th>
+              <th  class="lightup">60,268 km  </th>
+            </tr>
+            <tr >
+              <th  class="lightup">mass</th>
+              <th  class="lightup"> 5.683 × 10^26 kg   </th>
+            </tr>
+            <tr >
+              <th  class="lightup">length of a year</th>
+              <th  class="lightup">29.45 Earth years </th>
+            </tr>
+            <tr >
+              <th class="lightup">rotation period</th>
+              <th class="lightup"> 10.7 hr</th>
+            </tr>
+            <tr >
+              <th class="lightup">number of known moons  </th>
+              <th class="lightup"> sixty-two </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+     </section>
+ <!--Uranus-->
+  <section class="link ura7" id="ura"></section>
+     <section class="uranus planet">
+       <div class="grid-item number" id="ura"><p>7</p></div>
+       <div class="name">
+        <p class="lightup">Uranus</p>
+        <p class="lightup">The ice giant</p></div>
+      <div class="grid-item solar"><!--Sonnensystem darstellung-->
+          <div class="sun circle"></div>
+        <div class="mer circle"></div>
+        <div class="ven circle"></div>
+        <div class="ear circle"></div>
+        <div class="mar circle"></div>
+        <div class="jup circle"></div>
+        <div class="sat circle"></div>
+        <div class="ura circle"></div>
+        <div class="nep circle"></div>
+        <div class="planet-mer scroll-planet now" data-target="#mer"></div>
+        <div class="planet-ven scroll-planet not-now" data-target="#ven"></div>
+        <div class="planet-ear scroll-planet not-now" data-target="#ear"></div>
+        <div class="planet-mar scroll-planet not-now" data-target="#mar"></div>
+        <div class="planet-jup scroll-planet not-now" data-target="#jup"></div>
+        <div class="planet-sat scroll-planet not-now" data-target="#sat"></div>
+        <div class="planet-ura scroll-planet not-now" data-target="#ura"></div>
+        <div class="planet-nep scroll-planet not-now" data-target="#nep"></div>
+        <div class="ring scroll-planet not-now" data-target="#sat"></div>
+      </div>
+      <!--Tabllen informationen-->
+      <div class="grid-item info">
+        <table >
+          <tbody>
+            <tr >
+              <th class="lightup">mean dist from Sun </th>
+              <th class="lightup">2,870,658,000 km</th>
+            </tr>
+            <tr >
+              <th  class="lightup">mean radius</th>
+              <th  class="lightup">25,559 km   </th>
+            </tr>
+            <tr >
+              <th  class="lightup">mass</th>
+              <th  class="lightup"> 8.681 × 10^25 kg    </th>
+            </tr>
+            <tr >
+              <th  class="lightup">length of a year</th>
+              <th  class="lightup">84.02 Earth years  </th>
+            </tr>
+            <tr >
+              <th class="lightup">rotation period</th>
+              <th class="lightup"> 17.3 hr</th>
+            </tr>
+            <tr >
+              <th class="lightup">number of known moons  </th>
+              <th class="lightup"> twenty-seven </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+     </section>
+ <!--Neptune-->
+  <section class="link nep8" id="nep"></section>
+     <section class="neptune planet">
+       <div class="grid-item number" id="nep"><p>8</p></div>
+       <div class="name">
+        <p class="lightup">Neptune</p>
+        <p class="lightup">The windy planet</p></div>
+      <div class="grid-item solar"><!--Sonnensystem darstellung-->
+          <div class="sun circle"></div>
+        <div class="mer circle"></div>
+        <div class="ven circle"></div>
+        <div class="ear circle"></div>
+        <div class="mar circle"></div>
+        <div class="jup circle"></div>
+        <div class="sat circle"></div>
+        <div class="ura circle"></div>
+        <div class="nep circle"></div>
+        <div class="planet-mer scroll-planet now" data-target="#mer"></div>
+        <div class="planet-ven scroll-planet not-now" data-target="#ven"></div>
+        <div class="planet-ear scroll-planet not-now" data-target="#ear"></div>
+        <div class="planet-mar scroll-planet not-now" data-target="#mar"></div>
+        <div class="planet-jup scroll-planet not-now" data-target="#jup"></div>
+        <div class="planet-sat scroll-planet not-now" data-target="#sat"></div>
+        <div class="planet-ura scroll-planet not-now" data-target="#ura"></div>
+        <div class="planet-nep scroll-planet not-now" data-target="#nep"></div>
+        <div class="ring scroll-planet not-now" data-target="#sat" ></div>
+      </div>
+      <!--Tabllen informationen-->
+      <div class="grid-item info">
+        <table >
+          <tbody>
+            <tr >
+              <th class="lightup">mean dist from Sun </th>
+              <th class="lightup">4,498,396,000 km</th>
+            </tr>
+            <tr >
+              <th  class="lightup">mean radius</th>
+              <th  class="lightup">24,764 km  </th>
+            </tr>
+            <tr >
+              <th  class="lightup">mass</th>
+              <th  class="lightup"> 1.02 × 10^26 kg    </th>
+            </tr>
+            <tr >
+              <th  class="lightup">length of a year</th>
+              <th  class="lightup">164.79 Earth years  </th>
+            </tr>
+            <tr >
+              <th class="lightup">rotation period</th>
+              <th class="lightup"> 16.2 hr</th>
+            </tr>
+            <tr >
+              <th class="lightup">number of known moons  </th>
+              <th class="lightup"> fourteen </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+     </section>
+       <!--Sternen hintergrund????????-->
+    
+ 
+     </main>
+<!--script dass alle 3D Elemente und derren Bewegungen enthält-->
+  <script>
+    // Splitting the text of the headers into spans for light animation
+    document.addEventListener('DOMContentLoaded', function () {
+      let lightHeaders = document.querySelectorAll('.lightup');
+      
+      lightHeaders.forEach(header => {
+        let headerText = header.textContent;
+        header.textContent = "";
+
+        for (let i = 0; i < headerText.length; i++) {
+          header.innerHTML += "<span>" + headerText[i] + "</span>";
+        }
+      });
+    });
+  
+    //scrollt wenn man auf die planeten clickt zu den dazugehörigen feldern
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      const divs = document.querySelectorAll('.scroll-planet');
+    
+      divs.forEach(div => {
+        div.addEventListener('click', function () {
+          const targetId = this.getAttribute('data-target');
+          const targetElement = document.querySelector(targetId);
+    
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+</script>
 </body>
 </html>
